@@ -1,0 +1,26 @@
+<?php
+// login.php
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body style="font-family:Arial, sans-serif;">
+
+<?php include 'navbar.php'; ?>
+
+<h2 style="text-align:center;">Login</h2>
+<form style="max-width:300px; margin:20px auto; display:flex; flex-direction:column;" method="post" action="">
+  <label>Username:</label>
+  <input type="text" name="username" required style="padding:8px; margin-bottom:10px;">
+  
+  <label>Password:</label>
+  <input type="password" name="password" required style="padding:8px; margin-bottom:10px;">
+  <br>
+  <button type="submit" style="padding:10px; background:#4CAF50; color:white; border:none;">Login</button>
+</form>
+
+</body>
+</html>
