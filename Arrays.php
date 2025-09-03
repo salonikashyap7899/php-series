@@ -38,4 +38,7 @@ foreach( $users as $x){
     echo "<br/>";
 endforeach;
 }
+
+
+print_r($_COOKIE);
  ?>
