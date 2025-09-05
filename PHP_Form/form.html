@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form </title>
+</head>
+<body>
+    <form action="form.php" method="post">
+
+        <input type="text"  name="username" placeholder="Enter your username" required>
+        <br><br>
+
+        <input type="email"  name="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <br><br>
+        <input type="checkbox"  name="skills[]" value="HTML"  ><spam>HTML</spam>
+        <br>
+        <input type="checkbox"  name="skills[]" value="CPP"  ><spam>CPP</spam>
+        <br>
+        <input type="checkbox"  name="skills[]"  value="Java"  ><spam>Java</spam>
+        <br>
+        <input type="checkbox"  name="skills[]" value="php"  ><spam>php</spam>
+
+        <br><br>
+        <input type="radio"  name="gender"  value="male" ><spam>male</spam>
+        <br>
+        <input type="radio"  name="gender"  value="female" ><spam>female</spam>
+        <br>
+       <select name="city">
+        <option value="" disabled selected>select your city</option>
+        <option value="noida">noida</option>
+        <option value="delhi">delhi</option>
+        <option value="gurgaon">gurgaon</option>
+        <option value="mumbai">mumbai</option>
+       </select>
+         <br>
+           <br>
+
+           <textarea name="bio"  cols="30" rows="10" placeholder="Enter your address"></textarea>
+           <br><br>
+       <button>Sign Up</button>
+    </form>
+    
+</body>
+</html>

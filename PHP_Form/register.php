@@ -1,6 +1,6 @@
 <?php
 
-$_REQUEST['dummy'] = 'dummy';
+// $_REQUEST['dummy'] = 'dummy';
 
 if($_REQUEST){
   foreach($_REQUEST as $key=> $data){
@@ -8,5 +8,4 @@ if($_REQUEST){
     echo "<br>";
 }
 }
-
 ?>
