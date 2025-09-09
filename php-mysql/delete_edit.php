@@ -7,12 +7,9 @@ $student = $conn->prepare("select * from students ");
 
 
 echo $student->execute();
-
 $result = $student->fetchAll();
 
-
 echo "<table border='1'>";
-
 foreach($result as $students){
     echo "<tr>
 
@@ -22,6 +19,7 @@ foreach($result as $students){
      <td>". $students['gender']. "</td>
      <td><form method='post'><button name=delete
       value=".$students['id']." >Delete</button></form></td>
+      <td><a href='update.php?id=".$students['id']."'>Edit</a></td>
     
     </tr>";
 }

@@ -1,41 +1,40 @@
 <form action="" method="post">
-    <input type="text" name="name" placeholder="Enter Your Name">
-    <br/>
-    <br/>
-    <input type="email" name="email" placeholder="Enter Your Email">
-    <br/>
-    <br/>
-    <input type="radio" name="gender" value="male"> Male
+    <input type="text" name="name" placeholder="Enter Your Name" required>
+    <br/><br/>
+    <input type="email" name="email" placeholder="Enter Your Email" required>
+    <br/><br/>
+    <input type="text" name="age" placeholder="Enter Your Age" required>
+    <br/><br/>
+    <input type="radio" name="gender" value="male" required> Male
     <input type="radio" name="gender" value="female"> Female
-     <br/>
-    <br/>
-    <button type="submit">Add new student</button>
+    <br/><br/>
+    <button type="submit" name="submit">Add new student</button>
 </form>
 
-
-
-
-
 <?php
-
-if(isset($_POST['name'])){
-$name=$_POST['name'];
-$email=$_POST['email'];
-$gender=$_POST['gender'];
-
 include('./config.php');
-$student=$conn->prepare("INSERT INTO 
-`students` (`name`, `email`, `gender`)
-VALUES('$name', '$email', '$gender');
-");
 
-$result= $student->execute();
-if($result){
-    echo "Data Inserted Successfully"; 
-} else {
-    echo "Data Not Inserted";
+if(isset($_POST['submit'])){
+    $name   = $_POST['name'];
+    $age    = $_POST['age'];
+    $email  = $_POST['email'];
+    $gender = $_POST['gender'];
+
+    // ✅ Use placeholders (safe against SQL Injection)
+    $student = $conn->prepare("INSERT INTO students (name, age, email, gender) 
+                               VALUES (:name, :age, :email, :gender)");
+
+    $result = $student->execute([
+        ':name'   => $name,
+        ':age'    => $age,
+        ':email'  => $email,
+        ':gender' => $gender
+    ]);
+
+    if($result){
+        echo "✅ Data Inserted Successfully"; 
+    } else {
+        echo "❌ Data Not Inserted";
+    }
 }
-
-}
-
 ?>
