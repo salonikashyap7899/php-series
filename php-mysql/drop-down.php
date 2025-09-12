@@ -5,7 +5,7 @@ $getstudent = $conn->prepare("SELECT id, name FROM students");
 $getstudent->execute();
 
 // Fetch all rows
-$studentData = $getstudent->fetchAll(PDO::FETCH_ASSOC);
+$studentData = $getstudent->fetchAll();
 
 echo "<select>";
 echo "<option>Select Student</option>";

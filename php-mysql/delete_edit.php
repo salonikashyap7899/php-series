@@ -38,5 +38,4 @@ $student = $conn->prepare("delete from students where id=$id");
 }
 
 
-
 ?>

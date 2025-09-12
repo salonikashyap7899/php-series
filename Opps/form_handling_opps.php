@@ -11,11 +11,6 @@ $user = new User();
 $user -> getName($_POST['user']);
 
 } 
-
-
-
-
-
 ?>
 
 

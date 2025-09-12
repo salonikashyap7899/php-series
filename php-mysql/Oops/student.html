@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student </title>
+</head>
+<body>
+    <form action="./student.php" method="post">
+        <input type="hidden" name="id" value="<?php echo $studentId; ?>">
+
+    <input type="text" name="name" placeholder="Enter Your Name" required>
+    <br/><br/>
+    <input type="email" name="email" placeholder="Enter Your Email" required>
+    <br/><br/>
+    <input type="text" name="age" placeholder="Enter Your Age" required>
+    <br/><br/>
+    <input type="radio" name="gender" value="male" required> Male
+    <input type="radio" name="gender" value="female"> Female
+    <br/><br/>
+    <button type="submit" name="submit">Add new student</button>
+    <button type="submit" name="submit">Update Student </button>
+    <button type="submit" name="submit">Delete Student </button>
+</form>
+
+
+</body>
+</html>
