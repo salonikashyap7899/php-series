@@ -1,5 +1,4 @@
  <?php
-
  trait parentCompany1{
     function getTotalEmp(){
         echo "1000";
