@@ -9,8 +9,6 @@ class user {
 
 $user = new user();
 $user();
-
-
-
+ 
 
 ?>
